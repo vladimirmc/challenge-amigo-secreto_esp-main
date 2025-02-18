@@ -12,7 +12,7 @@ function asignarTextoElemento(elemento, texto) {
 }
 
 // función para agregar amigos
-function agregarAmigos(){
+function agregarAmigo(){
     //Capturar el valor del campo de entrada
     let nombreDeAmigo = document.getElementById('amigo').value;
     
