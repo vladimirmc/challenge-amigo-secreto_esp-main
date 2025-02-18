@@ -27,7 +27,22 @@ function agregarAmigo(){
         document.querySelector('#amigo').value = '';     
     } 
     asignarTextoElemento('h2',`Nombre del Amigo:${nombreDeAmigo}`);
-    console.log(nombreDeAmigo);
     return nombreDeAmigo;
 }
 
+function listaAmigos(elementos) {
+    let lista = document.getElementById("miLista");
+
+    // Limpiar la lista antes de agregar nuevos elementos
+    lista.innerHTML = "";
+
+    // Agregar nuevos elementos
+    elementos.forEach(texto => {
+        let item = document.createElement("li");
+        item.textContent = texto;
+        lista.appendChild(item);
+    });
+}
+
+// Ejemplo de uso
+actualizarLista(["Elemento 1", "Elemento 2", "Elemento 3"]);
