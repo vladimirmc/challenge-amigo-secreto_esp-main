@@ -1,5 +1,5 @@
 //variables
-let amigoSecreto = "Maria";
+let nombreDeAmigo = " ";
 let intentos = 0;
 let numeroMaximo = 10;
 // crea array de amigos
@@ -25,7 +25,8 @@ function agregarAmigo(){
         alert(nombreDeAmigo);
         //Limpiar el campo de entrada   
         document.querySelector('#amigo').value = '';     
-    }   
+    } 
+    asignarTextoElemento('p',nombreDeAmigo); 
     console.log(nombreDeAmigo);
     return nombreDeAmigo;
 }
