@@ -22,6 +22,7 @@ function agregarAmigo(){
     }  else {
         //Actualizar el array de amigos
         amigos.push(nombreDeAmigo); 
+        alert(nombreDeAmigo);
         //Limpiar el campo de entrada   
         document.querySelector('#amigo').value = '';     
     }   
