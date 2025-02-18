@@ -26,7 +26,7 @@ function agregarAmigo(){
         //Limpiar el campo de entrada   
         document.querySelector('#amigo').value = '';     
     } 
-    asignarTextoElemento('p',`Nombre del Amigo:${nombreDeAmigo}`);
+    asignarTextoElemento('h2',`Nombre del Amigo:${nombreDeAmigo}`);
     console.log(nombreDeAmigo);
     return nombreDeAmigo;
 }
