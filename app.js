@@ -24,25 +24,24 @@ function agregarAmigo(){
         amigos.push(nombreDeAmigo); 
         alert(nombreDeAmigo);
         //Limpiar el campo de entrada   
-        document.querySelector('#amigo').value = '';     
+        document.querySelector('#amigo').value = '';
+        listarLosAmigos();     
     } 
     asignarTextoElemento('h2',`Nombre del Amigo:${nombreDeAmigo}`);
     return nombreDeAmigo;
 }
 
-function listaAmigos(elementos) {
-    let lista = document.getElementById("miLista");
+function listarLosAmigos() {
+    let listaAmigos = document.getElementById("listaAmigos");
 
     // Limpiar la lista antes de agregar nuevos elementos
-    lista.innerHTML = "";
+    listaAmigos.innerHTML = "";
 
     // Agregar nuevos elementos
-    elementos.forEach(texto => {
+    for (let i=0; i<amigos.length; i++) {
         let item = document.createElement("li");
-        item.textContent = texto;
-        lista.appendChild(item);
-    });
+        item.textContent = amigos(i);
+        listaAmigos.appendChild(item);
+    };
 }
 
-// Ejemplo de uso
-actualizarLista(["Elemento 1", "Elemento 2", "Elemento 3"]);
