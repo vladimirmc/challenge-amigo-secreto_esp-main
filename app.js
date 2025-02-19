@@ -50,10 +50,10 @@ function sortearAmigo() {
     }   else {
     //Generar un índice aleatorio
     let indice =  Math.floor(Math.random()*numeroMaximo)+1;
-    consola.log(indice);
+    console.log(indice);
     //Obtener el nombre sorteado
     let amigoSorteado = amigos[indice];
-    consola.log(amigoSorteado);
+    console.log(amigoSorteado);
     //Mostrar el resultado
     asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);
         }
