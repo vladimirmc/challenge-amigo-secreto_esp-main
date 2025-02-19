@@ -40,7 +40,7 @@ function listarLosAmigos() {
     // Agregar nuevos elementos
     for (let i=0; i<amigos.length; i++) {
         let item = document.createElement("li");
-        item.textContent = amigos(i);
+        item.textContent = amigos[i];
         listaAmigos.appendChild(item);
     };
 }
