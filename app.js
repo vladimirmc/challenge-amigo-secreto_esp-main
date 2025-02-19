@@ -45,13 +45,15 @@ function listarLosAmigos() {
 
 function sortearAmigo() {
     //Validar que haya amigos disponibles: Antes de sortear, comprobar si el array amigos no está vacío.
-    if (amigos.length <= 0){
+    if (amigos.length < 0){
         alert ("No hay amigos ingresados");
     }   else {
     //Generar un índice aleatorio
     let indice =  Math.floor(Math.random()*numeroMaximo)+1;
+    consola.log(indice);
     //Obtener el nombre sorteado
     let amigoSorteado = amigos[indice];
+    consola.log(amigoSorteado);
     //Mostrar el resultado
     asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);
         }
