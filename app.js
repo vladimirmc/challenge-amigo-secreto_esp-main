@@ -18,6 +18,8 @@ function agregarAmigo(){
     if (nombreDeAmigo == ''){
         alert ("Por favor, inserte un nombre.");
     }  else {
+        //Chequear que el amigo no este repetido
+        chequeoAmigoIngresado ();
         //Actualizar el array de amigos
         amigos.push(nombreDeAmigo); 
         //Limpiar el campo de entrada   
@@ -25,6 +27,13 @@ function agregarAmigo(){
         listarLosAmigos();     
     } 
     return nombreDeAmigo;
+}
+function chequeoAmigoIngresado() {
+    for (let i=0; i<amigos.length; i++) {
+        if (nombreDeAmigo === amigo[i]) {
+            alert (¨Amigo ya fue ingresado¨);
+        } 
+    }
 }
 
 function listarLosAmigos() {
