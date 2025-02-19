@@ -40,10 +40,11 @@ function chequeoAmigoIngresado(nombreDeAmigo,flag) {
             alert ("Amigo ya fue ingresado antes"); 
         }
         else {
-            let flag = true;    
+            let flag = true;   
+            console.log(flag);  
         }          
     } 
-    console.log(flag);
+    
     return flag;
 }
 
