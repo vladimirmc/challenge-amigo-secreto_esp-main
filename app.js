@@ -68,7 +68,7 @@ function sortearAmigo() {
         }
    return;
 }
-function validar(){
+function validar(nombreDeAmigo){
 let caja1 = nombreDeAmigo
 
 if (caja1.length == 35 || /^\s+$/.test(caja1)) 
@@ -94,7 +94,7 @@ if (caja1.length == 35 || /^\s+$/.test(caja1))
 }
   // Función que verifica si el campo es válido antes de realizar cualquier otra acción.
   function verificar(nombreDeAmigo) {
-    const valido = validar();
+    const valido = validar(nombreDeAmigo);
     if (!valido) {
       alert('El campo no es válido.');
     } else {
