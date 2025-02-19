@@ -1,5 +1,6 @@
 //variables
 let numeroMaximo = 10;
+let flag = false;
 // crea array de amigos
 let amigos = [];
 //funcion para asignar texto
@@ -19,19 +20,23 @@ function agregarAmigo(){
         alert ("Por favor, inserte un nombre.");
     }  else {
         //Chequear que el amigo no este repetido
-        chequeoAmigoIngresado (nombreDeAmigo);
+        let flag = true;
+        chequeoAmigoIngresado (nombreDeAmigo,flag);
+        if flag {
         //Actualizar el array de amigos
         amigos.push(nombreDeAmigo); 
         //Limpiar el campo de entrada   
         document.querySelector('#amigo').value = '';
-        listarLosAmigos();     
+        listarLosAmigos();  
+        } 
     } 
     return nombreDeAmigo;
 }
-function chequeoAmigoIngresado(nombreDeAmigo) {
+function chequeoAmigoIngresado(nombreDeAmigo,flag) {
     for (let i=0; i<amigos.length; i++) {
         if (nombreDeAmigo === amigos[i]) {
-            alert ("Amigo ya fue ingresado");
+            alert ("Amigo ya fue ingresado antes");
+            let flag = false;
         } 
     }
     return;
