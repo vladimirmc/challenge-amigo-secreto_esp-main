@@ -14,7 +14,7 @@ function agregarAmigo(){
     //Capturar el valor del campo de entrada
     let nombreDeAmigo = document.getElementById('amigo').value;
     //Validar si el nombre ingresado es valido
-    verificar();
+    verificar(nombreDeAmigo);
     //Validar la entrada
     if (nombreDeAmigo == ''){
         alert ("Por favor, inserte un nombre.");
@@ -70,7 +70,7 @@ function sortearAmigo() {
 }
 
 // La siguiente funcion valida el elemento input
-function validar() {
+function validar(nombreDeAmigo) {
     // Variable que usaremos para determinar si el input es valido
     let isValid = false;
 
