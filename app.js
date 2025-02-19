@@ -45,7 +45,7 @@ function listarLosAmigos() {
 
 function sortearAmigo() {
     //Validar que haya amigos disponibles: Antes de sortear, comprobar si el array amigos no está vacío.
-    if (amigos.length = 0){
+    if (amigos.length <= 0){
         alert ("No hay amigos ingresados");
     }   else {
     //Generar un índice aleatorio
