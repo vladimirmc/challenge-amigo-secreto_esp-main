@@ -20,7 +20,6 @@ function agregarAmigo(){
         alert ("Por favor, inserte un nombre.");
     }  else {
         //Chequear que el amigo no este repetido
-        let flag = true;
         chequeoAmigoIngresado (nombreDeAmigo,flag);
         if (flag) {
         //Actualizar el array de amigos
@@ -37,7 +36,10 @@ function chequeoAmigoIngresado(nombreDeAmigo,flag) {
         if (nombreDeAmigo === amigos[i]) {
             let flag = false;
             console.log(flag);
-            alert ("Amigo ya fue ingresado antes");            
+            alert ("Amigo ya fue ingresado antes");  
+            else {
+            let flag = true;    
+            }          
         } 
     }
     console.log(flag);
