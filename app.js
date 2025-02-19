@@ -28,7 +28,7 @@ function agregarAmigo(){
         //Limpiar el campo de entrada   
         document.querySelector('#amigo').value = '';
         listarLosAmigos();     
-            return numeroDeAmigo;
+            return nombreDeAmigo;
         }      
     } 
 }
