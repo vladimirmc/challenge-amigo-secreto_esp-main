@@ -70,7 +70,7 @@ function sortearAmigo() {
 }
 function validar(){
 let caja1 = document.getElementById('amigo').value;
-
+console.log(caja1)
 if (caja1.length == 15 || /^\s+$/.test(caja1)) 
     {
         alert("Sólo se permiten de 15 letras para el nombre")
@@ -95,9 +95,8 @@ if (caja1.length == 15 || /^\s+$/.test(caja1))
   // Función que verifica si el campo es válido antes de realizar cualquier otra acción.
   function verificar() {
     const valido = validar();
-    if (!valido) {
+    if (!valido) {    
+      document.querySelector('#amigo').value = '';
       alert('El campo no es válido.');
-    } else {
-      alert('El campo es válido');
-    }
+    } 
   }
