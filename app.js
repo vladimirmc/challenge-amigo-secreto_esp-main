@@ -1,6 +1,6 @@
 //variables
 let numeroMaximo = 10;
-let flag = false;
+let flag = true;
 // crea array de amigos
 let amigos = [];
 //funcion para asignar texto
@@ -39,7 +39,7 @@ function chequeoAmigoIngresado(nombreDeAmigo,flag) {
             let flag = false;
         } 
     }
-    return;
+    return flag;
 }
 
 function listarLosAmigos() {
