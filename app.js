@@ -79,16 +79,16 @@ if (caja1.length == 35 || /^\s+$/.test(caja1))
 
     else if (caja1.length <= 35 || /^\s+$/.test(caja1)) 
     {
-        document.getElementById("txtnombre").focus();
-        document.getElementById("txtnombre").style.borderColor="green";
+        document.getElementById("amigo").focus();
+        document.getElementById("amigo").style.borderColor="green";
         return true;    
     }
 
     else if (/^([0-9])*$/.test(caja1))
     {
         alert("El valor " + caja1 + " no es una letra");
-        document.getElementById("txtnombre").focus();
-        document.getElementById("txtnombre").style.borderColor="red";
+        document.getElementById("amigo").focus();
+        document.getElementById("amigo").style.borderColor="red";
         return false; 
     }
 }
