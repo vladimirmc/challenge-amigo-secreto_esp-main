@@ -39,6 +39,7 @@ function chequeoAmigoIngresado(nombreDeAmigo,flag) {
             let flag = false;
         } 
     }
+    console.log(flag);
     return flag;
 }
 
