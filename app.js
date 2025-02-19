@@ -14,7 +14,7 @@ function agregarAmigo(){
     //Capturar el valor del campo de entrada
     let nombreDeAmigo = document.getElementById('amigo').value;
     //Validar si el nombre ingresado es valido
-    verificar(nombreDeAmigo);
+    verificar();
     //Validar la entrada
     if (nombreDeAmigo == ''){
         alert ("Por favor, inserte un nombre.");
@@ -68,16 +68,16 @@ function sortearAmigo() {
         }
    return;
 }
-function validar(nombreDeAmigo){
-let caja1 = nombreDeAmigo
+function validar(){
+let caja1 = document.getElementById('amigo').value;
 
-if (caja1.length == 35 || /^\s+$/.test(caja1)) 
+if (caja1.length == 15 || /^\s+$/.test(caja1)) 
     {
-        alert("Sólo se permiten de 35 letras para el nombre")
+        alert("Sólo se permiten de 15 letras para el nombre")
         return false;
     }
 
-    else if (caja1.length <= 35 || /^\s+$/.test(caja1)) 
+    else if (caja1.length <= 15 || /^\s+$/.test(caja1)) 
     {
         document.getElementById("amigo").focus();
         document.getElementById("amigo").style.borderColor="green";
@@ -93,8 +93,8 @@ if (caja1.length == 35 || /^\s+$/.test(caja1))
     }
 }
   // Función que verifica si el campo es válido antes de realizar cualquier otra acción.
-  function verificar(nombreDeAmigo) {
-    const valido = validar(nombreDeAmigo);
+  function verificar() {
+    const valido = validar();
     if (!valido) {
       alert('El campo no es válido.');
     } else {
