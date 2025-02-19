@@ -22,7 +22,7 @@ function agregarAmigo(){
         //Chequear que el amigo no este repetido
         let flag = true;
         chequeoAmigoIngresado (nombreDeAmigo,flag);
-        if flag {
+        if (flag) {
         //Actualizar el array de amigos
         amigos.push(nombreDeAmigo); 
         //Limpiar el campo de entrada   
