@@ -1,6 +1,4 @@
 //variables
-let nombreDeAmigo = " ";
-let intentos = 0;
 let numeroMaximo = 10;
 // crea array de amigos
 let amigos = [];
@@ -22,26 +20,40 @@ function agregarAmigo(){
     }  else {
         //Actualizar el array de amigos
         amigos.push(nombreDeAmigo); 
-        alert(nombreDeAmigo);
         //Limpiar el campo de entrada   
         document.querySelector('#amigo').value = '';
         listarLosAmigos();     
     } 
-    asignarTextoElemento('h2',`Nombre del Amigo:${nombreDeAmigo}`);
     return nombreDeAmigo;
 }
 
 function listarLosAmigos() {
+    //Obtener el elemento de la lista, para seleccionar la lista donde se mostrarán los amigos.
     let listaAmigos = document.getElementById("listaAmigos");
-
-    // Limpiar la lista antes de agregar nuevos elementos
+    //Limpiar la lista existente, para asegurarse de que no haya duplicados al actualizar.
     listaAmigos.innerHTML = "";
 
-    // Agregar nuevos elementos
+    // Agregar nuevos elementos 
     for (let i=0; i<amigos.length; i++) {
+        //crear elementos de lista (<li>) para cada título
         let item = document.createElement("li");
+        //Agregar elementos a la lista: Para cada amigo, crear un nuevo elemento de lista.
         item.textContent = amigos[i];
         listaAmigos.appendChild(item);
     };
 }
 
+function sortearAmigo() {
+    //Validar que haya amigos disponibles: Antes de sortear, comprobar si el array amigos no está vacío.
+    if (amigos.length = 0){
+        alert ("No hay amigos ingresados");
+    }   else {
+    //Generar un índice aleatorio
+    let indice =  Math.floor(Math.random()*numeroMaximo)+1;
+    //Obtener el nombre sorteado
+    let amigoSorteado = amigos[indice];
+    //Mostrar el resultado
+    asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);
+        }
+   
+}
