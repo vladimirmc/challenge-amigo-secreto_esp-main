@@ -19,7 +19,7 @@ function agregarAmigo(){
         alert ("Por favor, inserte un nombre.");
     }  else {
         //Chequear que el amigo no este repetido
-        chequeoAmigoIngresado ();
+        chequeoAmigoIngresado (nombreDeAmigo);
         //Actualizar el array de amigos
         amigos.push(nombreDeAmigo); 
         //Limpiar el campo de entrada   
@@ -28,12 +28,13 @@ function agregarAmigo(){
     } 
     return nombreDeAmigo;
 }
-function chequeoAmigoIngresado() {
+function chequeoAmigoIngresado(nombreDeAmigo) {
     for (let i=0; i<amigos.length; i++) {
         if (nombreDeAmigo === amigos[i]) {
             alert ("Amigo ya fue ingresado");
         } 
     }
+    return;
 }
 
 function listarLosAmigos() {
@@ -49,7 +50,8 @@ function listarLosAmigos() {
         //Agregar elementos a la lista: Para cada amigo, crear un nuevo elemento de lista.
         item.textContent = amigos[i];
         listaAmigos.appendChild(item);
-    };
+    }
+    return;
 }
 
 function sortearAmigo() {
@@ -66,5 +68,5 @@ function sortearAmigo() {
     //Mostrar el resultado
     asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);
         }
-   
+   return;
 }
