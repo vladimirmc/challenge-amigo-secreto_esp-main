@@ -20,6 +20,7 @@ function agregarAmigo(){
         alert ("Por favor, inserte un nombre.");
     }  else {
         //Chequear que el amigo no este repetido
+        let flag = false;
         chequeoAmigoIngresado (nombreDeAmigo,flag);
         if (flag) {
         //Actualizar el array de amigos
@@ -40,8 +41,8 @@ function chequeoAmigoIngresado(nombreDeAmigo,flag) {
         }
         else {
             let flag = true;    
-            }          
-        } 
+        }          
+    } 
     console.log(flag);
     return flag;
 }
