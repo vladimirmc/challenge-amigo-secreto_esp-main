@@ -36,6 +36,7 @@ function chequeoAmigoIngresado(nombreDeAmigo,flag) {
     for (let i=0; i<amigos.length; i++) {
         if (nombreDeAmigo === amigos[i]) {
             let flag = false;
+            console.log(flag);
             alert ("Amigo ya fue ingresado antes");            
         } 
     }
