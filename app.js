@@ -21,6 +21,7 @@ function agregarAmigo(){
         //Chequear que el amigo no este repetido
         if (amigos.includes(nombreDeAmigo)) {
             alert ("Amigo ya fue ingresado anteriomente");
+            document.querySelector('#amigo').value = '';
             return agregarAmigo();
         } else {
          //Actualizar el array de amigos
