@@ -20,7 +20,7 @@ function agregarAmigo(){
     }  else {
         //Chequear que el amigo no este repetido
         if (amigos.includes(nombreDeAmigo)) {
-            Alert ("Amigo ya fue ingresado anteriomente")
+            alert ("Amigo ya fue ingresado anteriomente");
             return agregarAmigo();
         } else {
          //Actualizar el array de amigos
