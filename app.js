@@ -1,6 +1,6 @@
 //variables
 let numeroMaximo = 10;
-let flag = false;
+let flag = Boolean;
 // crea array de amigos
 let amigos = [];
 //funcion para asignar texto
