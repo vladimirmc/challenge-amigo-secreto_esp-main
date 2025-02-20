@@ -61,9 +61,9 @@ function sortearAmigo() {
         let amigoSorteado = amigos[indice];
         console.log(amigoSorteado);
         //Mostrar el resultado
-        asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);
-        return agregarAmigo();
-    }   
+        asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);   
+    } 
+    return; 
 }
 
 //funcion para asignar texto
