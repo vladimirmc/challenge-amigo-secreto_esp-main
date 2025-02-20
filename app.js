@@ -66,6 +66,12 @@ function sortearAmigo() {
     return; 
 }
 
+//funcion para reiniciar sorteo
+function reiniciarSorteo() {
+    document.querySelector('#amigo').value = '';
+    document.querySelector('#reinicioBtn').setAttribute('disabled','true');
+    agregarAmigo();
+}
 //funcion para asignar texto
 function asignarTextoElemento(elemento, texto) {
     let elementoHTML = document.querySelector(elemento);
