@@ -24,7 +24,7 @@ function agregarAmigo(){
             if (amigos.includes(nombreDeAmigo)) {
                 document.querySelector('#amigo').value = '';
                 alert ("Amigo ya fue ingresado anteriomente");    
-                return agregarAmigo();
+             //   return agregarAmigo();
             } else {
                 //Actualizar el array de amigos
                 amigos.push(nombreDeAmigo); 
@@ -36,7 +36,7 @@ function agregarAmigo(){
         } 
         else {
             document.querySelector('#amigo').value = '';
-            alert ("El nombre ingresado contiene caracteres no permitidos");
+            alert ("El nombre ingresado contiene Nros. y/o caracteres no permitidos");
         }
     }
 }
