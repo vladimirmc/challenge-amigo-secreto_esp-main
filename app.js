@@ -14,13 +14,13 @@ function agregarAmigo(){
     //Capturar el valor del campo de entrada
     let nombreDeAmigo = document.getElementById('amigo').value;
 
-    //Validar si el nombre ingresado es valido
-    if (soloLetras(nombreDeAmigo)) {
-        console.log("El dato solo contiene letras.");
         //Validar la entrada
-        if (nombreDeAmigo == ''){
-            alert ("Por favor, inserte un nombre.");
-        }  else {
+    if (nombreDeAmigo == ''){
+        alert ("Por favor, inserte un nombre.");
+    }  else {
+        //Validar si el nombre ingresado es valido
+        if (soloLetras(nombreDeAmigo)) {
+            console.log("El dato solo contiene letras.");
             //Chequear que el amigo no este repetido
             if (amigos.includes(nombreDeAmigo)) {
                 document.querySelector('#amigo').value = '';
@@ -35,9 +35,9 @@ function agregarAmigo(){
                 return nombreDeAmigo;
             }      
         } 
-    } 
-    else {
-        console.log("El dato contiene caracteres no permitidos.");
+        else {
+            console.log("El dato contiene caracteres no permitidos.");
+        }
     }
 }
 
