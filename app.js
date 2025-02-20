@@ -13,26 +13,32 @@ function asignarTextoElemento(elemento, texto) {
 function agregarAmigo(){
     //Capturar el valor del campo de entrada
     let nombreDeAmigo = document.getElementById('amigo').value;
+
     //Validar si el nombre ingresado es valido
-    verificar();
-    //Validar la entrada
-    if (nombreDeAmigo == ''){
-        alert ("Por favor, inserte un nombre.");
-    }  else {
-        //Chequear que el amigo no este repetido
-        if (amigos.includes(nombreDeAmigo)) {
-            document.querySelector('#amigo').value = '';
-            alert ("Amigo ya fue ingresado anteriomente");    
-            return agregarAmigo();
-        } else {
-         //Actualizar el array de amigos
-        amigos.push(nombreDeAmigo); 
-        //Limpiar el campo de entrada   
-        document.querySelector('#amigo').value = '';
-        listarLosAmigos();     
-            return nombreDeAmigo;
-        }      
+    if (soloLetras(nombreDeAmigo)) {
+        console.log("El dato solo contiene letras.");
+        //Validar la entrada
+        if (nombreDeAmigo == ''){
+            alert ("Por favor, inserte un nombre.");
+        }  else {
+            //Chequear que el amigo no este repetido
+            if (amigos.includes(nombreDeAmigo)) {
+                document.querySelector('#amigo').value = '';
+                alert ("Amigo ya fue ingresado anteriomente");    
+                return agregarAmigo();
+            } else {
+                //Actualizar el array de amigos
+                amigos.push(nombreDeAmigo); 
+                //Limpiar el campo de entrada   
+                document.querySelector('#amigo').value = '';
+                listarLosAmigos();     
+                return nombreDeAmigo;
+            }      
+        } 
     } 
+    else {
+        console.log("El dato contiene caracteres no permitidos.");
+    }
 }
 
 function listarLosAmigos() {
@@ -68,35 +74,8 @@ function sortearAmigo() {
         }
    return;
 }
-function validar(){
-let caja1 = document.getElementById('amigo').value;
-console.log(caja1)
-if (caja1.length == 15 || /^\s+$/.test(caja1)) 
-    {
-        alert("Sólo se permiten de 15 letras para el nombre")
-        return false;
-    }
 
-    else if (caja1.length <= 15 || /^\s+$/.test(caja1)) 
-    {
-        document.getElementById("amigo").focus();
-        document.getElementById("amigo").style.borderColor="green";
-        return true;    
-    }
-
-    else if (/^([0-9])*$/.test(caja1))
-    {
-        alert("El valor " + caja1 + " no es una letra");
-        document.getElementById("amigo").focus();
-        document.getElementById("amigo").style.borderColor="red";
-        return false; 
-    }
+function soloLetras(input) {
+    const regex = /^[a-zA-Z]+$/;
+    return regex.test(input);
 }
-  // Función que verifica si el campo es válido antes de realizar cualquier otra acción.
-  function verificar() {
-    const valido = validar();
-    if (!valido) {    
-      document.querySelector('#amigo').value = '';
-      alert('El campo no es válido.');
-    } 
-  }
