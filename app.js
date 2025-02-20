@@ -20,7 +20,6 @@ function agregarAmigo(){
     }  else {
         //Validar si el nombre ingresado es valido
         if (soloLetras(nombreDeAmigo)) {
-            console.log("El dato solo contiene letras.");
             //Chequear que el amigo no este repetido
             if (amigos.includes(nombreDeAmigo)) {
                 document.querySelector('#amigo').value = '';
@@ -36,7 +35,8 @@ function agregarAmigo(){
             }      
         } 
         else {
-            console.log("El dato contiene caracteres no permitidos.");
+            document.querySelector('#amigo').value = '';
+            alert ("El nombre ingresado contiene caracteres no permitidos");
         }
     }
 }
