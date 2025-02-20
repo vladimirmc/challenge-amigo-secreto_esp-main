@@ -1,13 +1,5 @@
-//variables
-let numeroMaximo = 10;
 // crea array de amigos
 let amigos = [];
-//funcion para asignar texto
-function asignarTextoElemento(elemento, texto) {
-    let elementoHTML = document.querySelector(elemento);
-    elementoHTML.innerHTML = texto;
-    return;
-}
 
 // función para agregar amigos
 function agregarAmigo(){
@@ -62,18 +54,25 @@ function sortearAmigo() {
     if (amigos.length <= 0){
         alert ("No hay amigos ingresados");
     }   else {
-    //Generar un índice aleatorio
-    let indice =  Math.floor(Math.random()*amigos.length);
-    console.log(indice);
-    //Obtener el nombre sorteado
-    let amigoSorteado = amigos[indice];
-    console.log(amigoSorteado);
-    //Mostrar el resultado
-    asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);
-        }
-   return agregarAmigo();
+        //Generar un índice aleatorio
+        let indice =  Math.floor(Math.random()*amigos.length);
+        console.log(indice);
+        //Obtener el nombre sorteado
+        let amigoSorteado = amigos[indice];
+        console.log(amigoSorteado);
+        //Mostrar el resultado
+        asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);
+        return agregarAmigo();
+    }   
 }
 
+//funcion para asignar texto
+function asignarTextoElemento(elemento, texto) {
+    let elementoHTML = document.querySelector(elemento);
+    elementoHTML.innerHTML = texto;
+    return;
+}
+//funcion para validar solo letras
 function soloLetras(input) {
     const regex = /^[a-zA-Z]+$/;
     return regex.test(input);
