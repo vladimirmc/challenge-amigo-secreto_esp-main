@@ -62,6 +62,7 @@ function sortearAmigo() {
         console.log(amigoSorteado);
         //Mostrar el resultado
         asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);   
+        reiniciarSorteo();
     } 
     return; 
 }
@@ -70,6 +71,7 @@ function sortearAmigo() {
 function reiniciarSorteo() {
     document.querySelector('#amigo').value = '';
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
+    let amigos = [];
     agregarAmigo();
 }
 //funcion para asignar texto
