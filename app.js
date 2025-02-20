@@ -24,7 +24,6 @@ function agregarAmigo(){
             if (amigos.includes(nombreDeAmigo)) {
                 document.querySelector('#amigo').value = '';
                 alert ("Amigo ya fue ingresado anteriomente");    
-             //   return agregarAmigo();
             } else {
                 //Actualizar el array de amigos
                 amigos.push(nombreDeAmigo); 
@@ -72,7 +71,7 @@ function sortearAmigo() {
     //Mostrar el resultado
     asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);
         }
-   return;
+   return agregarAmigo();
 }
 
 function soloLetras(input) {
