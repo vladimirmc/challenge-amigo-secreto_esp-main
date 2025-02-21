@@ -72,11 +72,15 @@ function sortearAmigo() {
 
 //funcion para reiniciar sorteo
 function reiniciarSorteo() {
-    document.querySelector('#amigo').value = '';  
+    document.querySelector('#amigo').value = ''; 
+    //limpiar linea de mensaje
+    asignarTextoElemento('ul'," ");  
     console.log("funcion reiniciarSorteo");
     amigos.splice(" ", amigos.length);
     //Deshabilitar el botón de Reinicio
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
+    //Habilitar el boton de Sorteo
+    document.getElementById('sorteoBtn').removeAttribute('enable');
     return;
 }
 
