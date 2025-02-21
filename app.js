@@ -69,7 +69,7 @@ function sortearAmigo() {
 //funcion para reiniciar sorteo
 function reiniciarSorteo() {
     document.querySelector('#amigo').value = '';  
-    console.log(nombreDeAmigo);
+    console.log("funcion reiniciarSorteo");
     let amigos = [];
     let nombreDeAmigo = "";
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
