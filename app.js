@@ -64,7 +64,7 @@ function sortearAmigo() {
         asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);  
         //Deshabilitar botones 
         document.getElementById('reinicioBtn').removeAttribute('disabled');
-        //Deshabilitar boton sorteo
+        //Deshabilitar boton Sorteo
         document.querySelector('#sorteoBtn').setAttribute('disabled','true');
     } 
     return; 
