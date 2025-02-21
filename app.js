@@ -65,7 +65,7 @@ function sortearAmigo() {
         //Deshabilitar botones 
         document.getElementById('reinicioBtn').removeAttribute('disabled');
         //Deshabilitar boton Sorteo
-        document.querySelector('#sorteoBtn').setAttribute('disabled','true');
+        //document.querySelector('#sorteoBtn').setAttribute('disabled','true');
     } 
     return; 
 }
