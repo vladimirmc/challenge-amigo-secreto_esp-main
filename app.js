@@ -64,6 +64,7 @@ function sortearAmigo() {
         asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);  
         //Deshabilitar botones 
         document.getElementById('reinicioBtn').removeAttribute('disabled');
+        //Deshabilitar boton sorteo
         document.querySelector('#sorteoBtn').setAttribute('disabled','true');
     } 
     return; 
@@ -74,8 +75,10 @@ function reiniciarSorteo() {
     document.querySelector('#amigo').value = '';  
     console.log("funcion reiniciarSorteo");
     amigos.splice(" ", amigos.length);
-    //Deshabilitar el botón de nuevo sorteo
+    //Deshabilitar el botón de Reinicio
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
+    //Habilitar boton de Sorteo
+    document.querySelector('#sorteoBtn').setAttribute('disabled','false');
     return;
 }
 
