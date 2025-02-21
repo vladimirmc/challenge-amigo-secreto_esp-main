@@ -70,10 +70,13 @@ function sortearAmigo() {
 function reiniciarSorteo() {
     document.querySelector('#amigo').value = '';
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
+    console.log(`en funcion reiniciar, amigos ${amigos} `);
     let amigos = [];
     let nombreDeAmigo = "";
     agregarAmigo();
+    return;
 }
+
 //funcion para asignar texto
 function asignarTextoElemento(elemento, texto) {
     let elementoHTML = document.querySelector(elemento);
