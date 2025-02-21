@@ -61,8 +61,10 @@ function sortearAmigo() {
         let amigoSorteado = amigos[indice];
         console.log(amigoSorteado);
         //Mostrar el resultado
-        asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);   
+        asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);  
+        //Deshabilitar botones 
         document.getElementById('reinicioBtn').removeAttribute('disabled');
+        document.querySelector('#sorteoBtn').setAttribute('disabled','true');
     } 
     return; 
 }
@@ -72,7 +74,7 @@ function reiniciarSorteo() {
     document.querySelector('#amigo').value = '';  
     console.log("funcion reiniciarSorteo");
     amigos.splice(" ", amigos.length);
-    nombreDeAmigo = "";
+    //Deshabilitar el botón de nuevo sorteo
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
     return;
 }
