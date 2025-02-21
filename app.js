@@ -81,6 +81,7 @@ function reiniciarSorteo() {
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
     //Habilitar el boton de Sorteo
     document.querySelector('#sorteoBtn').setAttribute('enable','true');
+    document.getElementById('sorteoBtn').removeAttribute('enable');
     return;
 }
 
