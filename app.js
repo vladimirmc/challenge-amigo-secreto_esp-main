@@ -71,10 +71,9 @@ function sortearAmigo() {
 function reiniciarSorteo() {
     document.querySelector('#amigo').value = '';  
     console.log("funcion reiniciarSorteo");
-    let amigos = "";
-    let nombreDeAmigo = "";
+    amigos.splice(" ", amigos.length);
+    nombreDeAmigo = "";
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
-    agregarAmigo();
     return;
 }
 
