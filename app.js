@@ -80,7 +80,7 @@ function reiniciarSorteo() {
     //Deshabilitar el botón de Reinicio
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
     //Habilitar el boton de Sorteo
-    document.getElementById('sorteoBtn').removeAttribute('enable');
+    document.querySelector('#sorteoBtn').setAttribute('enable','true');
     return;
 }
 
