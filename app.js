@@ -70,7 +70,7 @@ function sortearAmigo() {
 function reiniciarSorteo() {
     document.querySelector('#amigo').value = '';  
     console.log("funcion reiniciarSorteo");
-    let amigos = [];
+    let amigos = "";
     let nombreDeAmigo = "";
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
     agregarAmigo();
