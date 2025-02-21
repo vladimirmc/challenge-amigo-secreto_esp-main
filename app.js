@@ -56,10 +56,8 @@ function sortearAmigo() {
     }   else {
         //Generar un índice aleatorio
         let indice =  Math.floor(Math.random()*amigos.length);
-        console.log(indice);
         //Obtener el nombre sorteado
         let amigoSorteado = amigos[indice];
-        console.log(amigoSorteado);
         //Mostrar el resultado
         asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);  
         //Deshabilitar botones 
@@ -75,13 +73,11 @@ function reiniciarSorteo() {
     document.querySelector('#amigo').value = ''; 
     //limpiar linea de mensaje
     asignarTextoElemento('ul'," ");  
-    console.log("funcion reiniciarSorteo");
     amigos.splice(" ", amigos.length);
     //Deshabilitar el botón de Reinicio
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
     //Habilitar el boton de Sorteo
     document.querySelector('#sorteoBtn').setAttribute('enable','true');
-    document.getElementById('sorteoBtn').removeAttribute('enable');
     return;
 }
 
