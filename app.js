@@ -62,6 +62,7 @@ function sortearAmigo() {
         console.log(amigoSorteado);
         //Mostrar el resultado
         asignarTextoElemento('ul',`El Amigo Secreto es:${amigoSorteado}`);   
+        document.getElementById('reinicioBtn').removeAttribute('disabled');
     } 
     return; 
 }
