@@ -77,8 +77,6 @@ function reiniciarSorteo() {
     amigos.splice(" ", amigos.length);
     //Deshabilitar el botón de Reinicio
     document.querySelector('#reinicioBtn').setAttribute('disabled','true');
-    //Habilitar boton de Sorteo
-    document.querySelector('#sorteoBtn').setAttribute('disabled','false');
     return;
 }
 
